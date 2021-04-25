@@ -6,9 +6,9 @@ int main(){
   int x;
   string y;
 
-  cout << "Tell me your age >> " << endl; /* "<<" is  "mouse"*/
+  cout << "Tell me your age >> "; /* "<<" is  "mouse"*/
   cin >> x;				   /* ">>" is "arrow"*/
-  cout << "Tell me your name >>" << endl;
+  cout << "Tell me your name >> ";
   cin >> y;
 
   cout << "your age is " << x << endl;
