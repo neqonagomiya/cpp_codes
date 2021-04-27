@@ -7,6 +7,10 @@ class Neko{
   string name;
   
 public:
+  Neko(){}
+  Neko(string n){
+    name = n;
+  }
   void SetName(string n){
     name = n;
   }
@@ -17,9 +21,10 @@ public:
 
 int main()
 {
- Neko x;
+ Neko x("mako");
  x.Naku();
 
- x.SetName("mako");
- x.Naku();
+ Neko y;
+ y.SetName("nyaa");
+ y.Naku();
 }
