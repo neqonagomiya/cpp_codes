@@ -15,6 +15,14 @@ class Rocket2{
 public:
   Rocket2():f(100),v(0),h(0){}
   Rocket2(int a, int b, int c):f(a),v(b),h(c){}
+  //destructor
+  ~Rocket2(){
+    cout << "END OF THE SPACE Escape" << endl;
+    cout << "Disassembled Rocket2" << endl;
+  }
+  int GetF() const{
+    return f;
+  }
 
   void Accel(int b){
     if(b<0){
@@ -36,3 +44,24 @@ public:
     cout << endl;
   }
 };
+
+int main(){
+
+  Rocket2 x;
+  int b;
+  x.Report();
+  cout << "input boost value >> ";
+  cin >> b;
+  x.Accel(b);
+  x.Report();
+
+  while(x.GetF() > 0){
+    cout << "there are still fuel" << endl;
+    cout << "boost value >> ";
+    cin >> b;
+    
+    x.Accel(b);
+    x.Report();
+  }
+  cout << "mission complete" << endl;
+}
